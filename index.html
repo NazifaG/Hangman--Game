@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hangman Game</title>
+</head>
+<body>
+    <section class="section1" style="display: block">
+        <h1>HANGMAN</h1>
+        <button class="play">Play</button>
+    </section>
+
+    <section class="section2" style="display:none">
+        <div class="trophy">
+            <i class="icon fa-solid fa-trophy"></i>
+            <span class="point">0</span>
+        </div>
+     <p>Animals</p>
+     <div class="hangman-word"></div>
+     
+     <div class="letters">
+     <button class="btn" value="q">Q</button>
+     <button class="btn" value="w">W</button>
+     <button class="btn" value="e">E</button>
+     <button class="btn" value="r">R</button>
+     <button class="btn" value="t">T</button>
+     <button class="btn" value="y">Y</button>
+     <button class="btn" value="u">U</button>
+     <button class="btn" value="i">I</button>
+     <button class="btn" value="o">O</button>
+     <button class="btn" value="p">P</button><br> 
+     <button class="btn" value="a">A</button>
+     <button class="btn" value="s">S</button>
+     <button class="btn" value="d">D</button>
+     <button class="btn" value="f">F</button>
+     <button class="btn" value="g">G</button>
+     <button class="btn" value="h">H</button>
+     <button class="btn" value="j">J</button>
+     <button class="btn" value="k">K</button>
+     <button class="btn" value="l">L</button><br>
+     <button class="btn" value="z">Z</button>
+     <button class="btn" value="x">X</button>
+     <button class="btn" value="c">C</button>
+     <button class="btn" value="v">V</button>
+     <button class="btn" value="b">B</button>
+     <button class="btn" value="n">N</button>
+     <button class="btn" value="m">M</button>
+
+    </div>
+
+    <div class="hangman-container">
+        <img id="hangman-picture" class="hangman-image" src="./hangman-0.svg" alt="Hangman Picture"> 
+    </div>
+
+    <div id="new-game-popup hide" style="display:none">
+         <div id="result-text">
+         <button id="new-game-button"></button>
+         </div>
+    </div>
+
+    <audio id="correct-sound" src="./cute-level-up-3-189853.mp3"></audio>
+    <audio id="wrong-sound" src="./wrong-answer-129254.mp3"></audio>
+    <audio id="victory-sound" src="./goodresult-82807.mp3"></audio>
+
+
+    </section>
+     
+
+    <script src="./index.js"></script>
+</body>
+</html>
