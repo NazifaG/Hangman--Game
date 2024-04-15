@@ -9,8 +9,10 @@
 </head>
 <body>
     <section class="section1" style="display: block">
+        <div class="enter">
         <h1>HANGMAN</h1>
         <button class="play">Play</button>
+    </div>
     </section>
 
     <section class="section2" style="display:none">
@@ -18,6 +20,8 @@
             <i class="icon fa-solid fa-trophy"></i>
             <span class="point">0</span>
         </div>
+
+        <div class="word">
      <p>Animals</p>
      <div class="hangman-word"></div>
      
@@ -32,7 +36,7 @@
      <button class="btn" value="i">I</button>
      <button class="btn" value="o">O</button>
      <button class="btn" value="p">P</button><br> 
-     <button class="btn" value="a">A</button>
+     <button class="btn" style="margin-left: 2.5em;"  value="a">A</button>
      <button class="btn" value="s">S</button>
      <button class="btn" value="d">D</button>
      <button class="btn" value="f">F</button>
@@ -41,7 +45,7 @@
      <button class="btn" value="j">J</button>
      <button class="btn" value="k">K</button>
      <button class="btn" value="l">L</button><br>
-     <button class="btn" value="z">Z</button>
+     <button class="btn" style="margin-left: 6.3em;" value="z">Z</button>
      <button class="btn" value="x">X</button>
      <button class="btn" value="c">C</button>
      <button class="btn" value="v">V</button>
@@ -50,15 +54,15 @@
      <button class="btn" value="m">M</button>
 
     </div>
+</div>
 
     <div class="hangman-container">
         <img id="hangman-picture" class="hangman-image" src="./hangman-0.svg" alt="Hangman Picture"> 
     </div>
 
-    <div id="new-game-popup hide" style="display:none">
-         <div id="result-text">
-         <button id="new-game-button"></button>
-         </div>
+    <div id="new-game-popup" class="hide" style="display:none">
+         <div id="result-text"> </div>
+         <button id="new-game-button">New Game</button>
     </div>
 
     <audio id="correct-sound" src="./cute-level-up-3-189853.mp3"></audio>

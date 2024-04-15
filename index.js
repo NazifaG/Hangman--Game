@@ -1,6 +1,7 @@
 let firstPage = document.querySelector('.section1')
 let secondpage =document.querySelector('.section2')
 let play =document.querySelector('.play')
+
 let letters = document.querySelector('.letters')
 let hangmanWord =document.querySelector('.hangman-word')
 let point = document.querySelector('.point')
@@ -90,7 +91,7 @@ function markWrong(letter) {
     button.style.boxShadow = '0 0 3px rgba(255, 0, 0, 0.5)'
 }
 
-
+//BRING SOUND
 function playCorrectSound() {
     let correctSound = document.getElementById('correct-sound');
     correctSound.play();
@@ -106,6 +107,7 @@ function playWrongSound(){
 function playVictorySound(){
     let victorySound = document.getElementById('victory-sound')
     victorySound.play()
+    showResult("You Win!")
 }
 
 
@@ -117,7 +119,7 @@ function updateHangman(){
     hangmanPicture.src = `hangman-${hangmanStep}.svg`
     if(hangmanStep===6){
     // alert('You lost the game!')
-  
+    showResult("You Lose! The word was " + randomAnimal)
     resetPoints()
 
     }
@@ -130,5 +132,39 @@ function resetPoints() {
 }
 
 //RESULT POPUP
+
+function showResult(resultMessage) {
+    let resultText = document.getElementById("result-text");
+    resultText.textContent = resultMessage;
+
+  
+    let newGamePopup = document.getElementById("new-game-popup");
+    newGamePopup.style.display = "block";
+
+    let newGameButton = document.getElementById("new-game-button");
+    newGameButton.addEventListener("click", newGame);
+}
+
+
+//NEW GAME FUNCTION
+function newGame() {
+    let newGamePopup = document.getElementById("new-game-popup");
+    newGamePopup.style.display = "none";
+
+    hangmanStep = 0;
+    hangmanPicture.src = `./hangman-${hangmanStep}.svg`;
+
+    let buttons = document.querySelectorAll('.btn');
+    buttons.forEach(function(button) {
+        button.style.color = '';
+        button.style.boxShadow = '';
+    });
+
+    hangmanWord.textContent = '';
+    createWord();
+
+    secondpage.style.display = 'block';
+    getRandomAnimal();
+}
 
 
